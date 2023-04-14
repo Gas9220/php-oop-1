@@ -28,6 +28,7 @@
                         <span>Minutes: {{ movie.minutes }}</span>
                         <span>Vote: {{ movie.vote }}</span>
                         <span>Over 18: {{ movie.over18 ? 'Yes' : 'No' }}</span>
+                        <span>Genres: {{ concatGenres(movie.genre) }}</span>
                     </div>
                     <img :src="movie.img" :alt="movie.title + '-img'">
                 </div>

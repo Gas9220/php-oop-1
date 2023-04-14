@@ -14,6 +14,9 @@ createApp({
           console.log(response);
           this.movies = response.data;
       })
+    },
+    concatGenres(genre) {
+      return genre.join(', ');
     }
   },
   created() {
