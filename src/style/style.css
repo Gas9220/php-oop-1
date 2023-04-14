@@ -4,13 +4,21 @@
     padding: 0;
 }
 
+header {
+    text-align: center;
+    padding: .625rem;
+    background-color:cornflowerblue;
+    color: white;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 3.125rem auto;
+    margin: 1.875rem auto;
     width: 70%;
     max-width: 75rem;
     justify-content: center;
+    color: white;
 }
 
 .card-container {
@@ -21,9 +29,23 @@
     text-align: center;
 }
 
+.movie-card img {
+    margin-top: auto;
+    border-radius: .8rem;
+    max-height: 25rem;
+}
+
+div.info {
+    margin: .5rem 0;
+}
+
+div.info span {
+    display: block;
+}
+
 .movie-card {
     width: 18.75rem;
-    background-color: rebeccapurple;
+    background-color: cornflowerblue;
     display: flex;
     flex-direction: column;
     height: 100%;

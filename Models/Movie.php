@@ -7,8 +7,8 @@ class Movie implements \JsonSerializable {
     private $minutes;
     private $over18;
     private $genre;
-
-    public function __construct(string $title, string $release_date, string $language, float $vote, float $minutes, bool $over18, array $genre) {
+    private $img;
+    public function __construct(string $title, string $release_date, string $language, float $vote, float $minutes, bool $over18, array $genre, string $img) {
         $this->title = $title;
         $this->release_date = $release_date;
         $this->language = $language;
@@ -16,6 +16,7 @@ class Movie implements \JsonSerializable {
         $this->minutes = $minutes;
         $this->over18 = $over18;
         $this->genre = $genre;
+        $this->img = $img;
     }
 
     public function isLongerThan($min) {

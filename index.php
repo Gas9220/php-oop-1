@@ -15,15 +15,21 @@
 
 <body>
     <div id="app">
+        <header>
+            <h1>Moovieland</h1>
+        </header>
         <div class="container">
             <div v-for="movie in movies" class="card-container">
                 <div class="movie-card">
                     <h3>{{ movie.title }}</h3>
-                    <span>Release date: {{ movie.release_date }}</span>
-                    <span>Language: {{ movie.language }}</span>
-                    <span>Minutes: {{ movie.minutes }}</span>
-                    <span>Vote: {{ movie.vote }}</span>
-                    <span>Over 18: {{ movie.over18 ? 'Yes' : 'No' }}</span>
+                    <div class="info">
+                        <span>Release date: {{ movie.release_date }}</span>
+                        <span>Language: {{ movie.language }}</span>
+                        <span>Minutes: {{ movie.minutes }}</span>
+                        <span>Vote: {{ movie.vote }}</span>
+                        <span>Over 18: {{ movie.over18 ? 'Yes' : 'No' }}</span>
+                    </div>
+                    <img :src="movie.img" :alt="movie.title + '-img'">
                 </div>
             </div>
         </div>
