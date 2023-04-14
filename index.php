@@ -11,7 +11,7 @@ class Movie {
     public function __construct(string $title, string $release_date, string $language, float $vote, float $minutes, bool $over18, string $genre) {
         $this->title = $title;
         $this->release_date = $release_date;
-        $this->$language = $language;
+        $this->language = $language;
         $this->vote = $vote;
         $this->minutes = $minutes;
         $this->over18 = $over18;
@@ -26,5 +26,11 @@ class Movie {
         return $this->release_date;
     }
 }
+
+$lordOfTheRings = new Movie("Lord of the rings", "20-11-2005", "US", 9.8, 210, false, "Fantasy");
+var_dump($lordOfTheRings);
+
+$gladiator = new Movie("Gladiator", "13-05-2000", "IT", 8.5, 170, true, "Drama");
+var_dump($gladiator);
 
 ?>
