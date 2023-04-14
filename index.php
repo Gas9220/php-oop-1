@@ -8,7 +8,7 @@ class Movie {
     private $over18;
     private $genre;
 
-    public function __construct(string $title, string $release_date, string $language, float $vote, float $minutes, bool $over18, string $genre) {
+    public function __construct(string $title, string $release_date, string $language, float $vote, float $minutes, bool $over18, array $genre) {
         $this->title = $title;
         $this->release_date = $release_date;
         $this->language = $language;
@@ -27,10 +27,10 @@ class Movie {
     }
 }
 
-$lordOfTheRings = new Movie("Lord of the rings", "20-11-2005", "US", 9.8, 210, false, "Fantasy");
+$lordOfTheRings = new Movie("Lord of the rings", "20-11-2005", "US", 9.8, 210, false, ["Fantasy", "Action"]);
 var_dump($lordOfTheRings);
 
-$gladiator = new Movie("Gladiator", "13-05-2000", "IT", 8.5, 170, true, "Drama");
+$gladiator = new Movie("Gladiator", "13-05-2000", "IT", 8.5, 170, true, ["Drama", "Adventure"]);
 var_dump($gladiator);
 
 ?>
